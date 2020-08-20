@@ -8,7 +8,9 @@ class Game {
     this._maxRounds = maxRounds;
     this._currentRound = 1;
     this._moves = ["Rock", "Paper", "Scissors"];
+    this._shortCode = ["R","P","S"];
   }
+
   //setting up a new game
   newGame(){
     console.log(
@@ -18,7 +20,7 @@ class Game {
     for(var i = 1; i <= this._maxRounds; i++) {
 
       console.log(`Playing round ${this._currentRound} of ${this._maxRounds}`);
-      this._playerOne._move = this.robotMove();
+      this._playerOne._move = this.humanMove();
       this._playerTwo._move = this.robotMove();
       console.log(this.checkWinner());
       this._currentRound++;
@@ -68,6 +70,24 @@ class Game {
     let choiceIndex  = Math.floor(randomNumber * this._moves.length);
     console.log((this._moves[choiceIndex]));
     return (this._moves[choiceIndex]);
+ }
+ humanMove(){
+   let rock = "R";
+   let scissors = "S";
+   let paper = "P";
+   let humanInput;
+
+      do {
+        humanInput = prompt(`Choose between rock, paper or scissors!
+           Write ${rock} for rock, ${scissors} for scissors, and ${paper} for paper.`);
+           humanInput = humanInput.toUpperCase();
+      }
+      while(!(this._shortCode.includes(humanInput)));
+      // while(humanInput !== rock && humanInput !== scissors && humanInput !== paper);
+        console.log(this._moves[this._shortCode.indexOf(humanInput)]); // translate from [R, P, S] to  [Rock, Scissors, Paper]
+
+        return(this._moves[this._shortCode.indexOf(humanInput)]); // translate from [R, P, S] to  [Rock, Scissors, Paper]
+
  }
 }
 
