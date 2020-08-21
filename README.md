@@ -12,6 +12,8 @@ HTML, CSS (User Interface)
 
 JS (Game logic)
 
+Jquery (DOM manipulation)
+
 # How to run locally
 
 * Fork the repository
@@ -20,6 +22,8 @@ JS (Game logic)
 
 # Gameplan
 <img src="./roshambo.png" width="800">
+
+* Choose number of rounds.
 
 * Write Player 1 name.
 
