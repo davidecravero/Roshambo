@@ -27,7 +27,7 @@ HTML, CSS, JS
 
 * Draw adds 1 point to both players.
 
-* The winner of the match is declared after 3 round.
+* The winner of the match is declared after 3 rounds.
 
 # Good Luck!
 =======
