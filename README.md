@@ -5,6 +5,7 @@
 ## :tada: Group Members :beer:
 Davide, Zee, J
 
+
 # Stack
 
 HTML, CSS, JS
@@ -17,6 +18,10 @@ HTML, CSS, JS
 
 # Gameplan
 
+
+
+![alt text]("./roshambo.png" width="800")
+
 * Choose between Rock, Paper or Scissors.
 
 * Computer randomly chooses between the three options.
@@ -28,3 +33,9 @@ HTML, CSS, JS
 * The winner of the match is declared after 3 round.
 
 # Good Luck!
+=======
+
+best,
+Davide, Zee, J.
+
+
