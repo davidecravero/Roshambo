@@ -23,9 +23,9 @@ Jquery (DOM manipulation)
 # Gameplan
 <img src="./roshambo.png" width="800">
 
-* Choose number of rounds.
+* Set number of rounds.
 
-* Write Human and Computer name.
+* Write names for Human and Computer.
 
 * Choose between Rock, Paper or Scissors.
 
