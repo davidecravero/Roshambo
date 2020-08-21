@@ -15,4 +15,4 @@ We hope you will have fun to play with it.
 best,
 Davide, Zee, J.
 
-![](./roshambo.png | width=100)
+<img src="./roshambo.png" width="800">
