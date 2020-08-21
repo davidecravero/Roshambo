@@ -25,7 +25,7 @@ Jquery (DOM manipulation)
 
 * Choose number of rounds.
 
-* Write Player 1 name.
+* Write Human and Computer name.
 
 * Choose between Rock, Paper or Scissors.
 
