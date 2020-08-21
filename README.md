@@ -17,10 +17,7 @@ HTML, CSS, JS
 * Open index.html using any browser
 
 # Gameplan
-
-
-
-![alt text]("./roshambo.png" width="800")
+<img src="./roshambo.png" width="800">
 
 * Choose between Rock, Paper or Scissors.
 
