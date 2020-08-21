@@ -8,7 +8,9 @@ Davide, Zee, J
 
 # Stack
 
-HTML, CSS, JS
+HTML, CSS (User Interface) 
+
+JS (Game logic)
 
 # How to run locally
 
@@ -18,6 +20,8 @@ HTML, CSS, JS
 
 # Gameplan
 <img src="./roshambo.png" width="800">
+
+* Write Player 1 name.
 
 * Choose between Rock, Paper or Scissors.
 
