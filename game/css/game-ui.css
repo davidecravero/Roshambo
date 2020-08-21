@@ -1,0 +1,624 @@
+@charset "utf-8";
+/* --------------------------------------------------------- */
+/* animations 												 */
+/* --------------------------------------------------------- */
+@-webkit-keyframes drop-from-top {
+  0% {-webkit-transform: translateY(-100%); opacity: 0;}
+  100% {-webkit-transform: translateY(0); opacity: 1;}
+}
+@-moz-keyframes drop-from-top {
+  0% {-moz-transform: translateY(-100%); opacity: 0;}
+  100% {-moz-transform: translateY(0); opacity: 1;}
+}
+@-o-keyframes drop-from-top {
+  0% {-o-transform: translateY(-100%); opacity: 0;}
+  100% {-o-transform: translateY(0); opacity: 1;}
+}
+@keyframes drop-from-top {
+  0% {transform: translateY(-100%); opacity: 0;}
+  100% {transform: translateY(0); opacity: 1;}
+}
+
+@-webkit-keyframes drop-to-top {
+  0% {-webkit-transform: translateY(0); opacity: 1;}
+	100% {-webkit-transform: translateY(-100%); opacity: 0;}
+  
+}
+@-moz-keyframes drop-to-top {
+  0% {-moz-transform: translateY(0); opacity: 1;}
+	100% {-moz-transform: translateY(-100%); opacity: 0;}
+  
+}
+@-o-keyframes drop-to-top {
+      0% {-o-transform: translateY(0); opacity: 1;}
+	100% {-o-transform: translateY(-100%); opacity: 0;}
+   
+}
+@keyframes drop-to-top {
+    0% {transform: translateY(0); opacity: 1;}
+  100% {transform: translateY(-100%); opacity: 0;}
+  
+}
+
+@-webkit-keyframes scale-to-top {
+  0% {-webkit-transform: translateY(0); opacity: 1;}
+	100% {-webkit-transform: translateY(-10px); opacity: 1; font-size: 2rem;}
+  
+}
+@-moz-keyframes scale-to-top {
+  0% {-moz-transform: translateY(0); opacity: 1;}
+	100% {-moz-transform: translateY(-10px); opacity: 1; font-size: 2rem;}
+  
+}
+@-o-keyframes scale-to-top {
+      0% {-o-transform: translateY(0); opacity: 1;}
+	100% {-o-transform: translateY(-10px); opacity: 1; font-size: 2rem;}
+   
+}
+@keyframes scale-to-top {
+    0% {transform: translateY(0); opacity: 1;}
+  100% {transform: translateY(-10px); opacity: 1; font-size: 2rem; }
+  
+}
+
+@-webkit-keyframes shrink-header {
+  0% {height: 100vh;}
+  100% {height: 170px;}
+}
+@-moz-keyframes shrink-header {
+  0% {height: 100vh;}
+  100% {height: 170px;}
+}
+@-o-keyframes shrink-header {
+  0% {height: 100vh;}
+  100% {height: 170px;}
+}
+@keyframes shrink-header {
+  0% {height: 100vh;}
+  100% {height: 170px;}
+}
+
+@-webkit-keyframes fade-from-left {
+  0% {-webkit-transform: translateX(-100%); opacity: 0;}
+  100% {-webkit-transform: translateX(0); opacity: 1;}
+}
+@-moz-keyframes fade-from-left {
+  0% {-moz-transform: translateX(-100%); opacity: 0;}
+  100% {-moz-transform: translateX(0); opacity: 1;}
+}
+@-o-keyframes fade-from-left {
+  0% {-o-transform: translateX(-100%); opacity: 0;}
+  100% {-o-transform: translateX(0); opacity: 1;}
+}
+@keyframes fade-from-left {
+  0% {transform: translateX(-100%); opacity: 0;}
+  100% {transform: translateX(0); opacity: 1;}
+}
+
+@-webkit-keyframes fade-to-right {
+  0% {-webkit-transform: translateX(0); opacity: 1;}
+  100% {-webkit-transform: translateX(100%); opacity: 0;}
+}
+@-moz-keyframes fade-to-right {
+  0% {-moz-transform: translateX(0); opacity: 1;}
+  100% {-moz-transform: translateX(100%); opacity: 0;}
+}
+@-o-keyframes fade-to-right {
+  0% {-o-transform: translateX(0); opacity: 1;}
+  100% {-o-transform: translateX(100%); opacity: 0;}
+}
+@keyframes fade-to-right {
+  0% {transform: translateX(0); opacity: 1;}
+  100% {transform: translateX(100%); opacity: 0;}
+}
+
+/* to debug, make everything faster */
+/*html * {animation-duration: 0.2s !important; animation-delay:0.2s !important;}*/
+/* --------------------------------------------------------- */
+/* Styles for Roshambo UI 								     */
+/* --------------------------------------------------------- */
+html, body {margin:0; padding:0;}
+html {
+  font-size: 62.5%;
+  min-width: 300px;
+  
+}
+
+html * {box-sizing: border-box;}
+
+body {
+  background-color: #222;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  overflow: hidden;
+}
+
+.roshambo-header {
+  z-index: 10;
+  padding: 30px 10px 0px 10px;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #333;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+          align-items: center;
+  border-bottom: 1px solid #ffdc5d;
+}
+
+.roshambo-emojis span {
+	display: inline-block; margin-bottom:20px;
+	
+	-webkit-animation: drop-from-top 0.9s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.3s;
+	   -moz-animation: drop-from-top 0.9s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.3s;
+	     -o-animation: drop-from-top 0.9s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.3s;
+            animation: drop-from-top 0.9s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.3s;
+}
+
+.roshambo-emojis span i {
+	width:80px;
+	height:80px;
+	background-size:cover;
+	margin:0px 20px
+}
+
+.roshambo-header h1 {
+  padding: 5px 0;
+}
+.roshambo-header h1 span {
+  display: inline-block;
+  margin-right: 10px; margin-bottom:20px;
+  font-size: 3rem;
+  -webkit-animation: drop-from-top 0.5s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.5s;
+	 -moz-animation: drop-from-top 0.5s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.5s;
+	   -o-animation: drop-from-top 0.5s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.5s;
+          animation: drop-from-top 0.5s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.5s;
+}
+.anim-1.elem-1 {-webkit-animation-delay:0.0s; -moz-animation-delay:0.0s; -o-animation-delay:0.0s; animation-delay:0.0s;}
+.anim-1.elem-2 {-webkit-animation-delay:0.3s; -moz-animation-delay:0.3s; -o-animation-delay:0.3s; animation-delay:0.3s;}
+.anim-1.elem-3 {-webkit-animation-delay:0.6s; -moz-animation-delay:0.6s; -o-animation-delay:0.6s; animation-delay:0.6s;}
+
+.anim-2.elem-1 {-webkit-animation-delay:1.0s; -moz-animation-delay:1.0s; -o-animation-delay:1.0s; animation-delay:1.0s;}
+.anim-2.elem-2 {-webkit-animation-delay:1.5s; -moz-animation-delay:1.5s; -o-animation-delay:1.5s; animation-delay:1.5s;}
+.anim-2.elem-3 {-webkit-animation-delay:2.0s; -moz-animation-delay:2.0s; -o-animation-delay:2.0s; animation-delay:2.0s;}
+
+.info-1, .info-2 {  margin:5px;
+					  -webkit-animation: fade-from-left 0.9s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.5s;
+						 -moz-animation: fade-from-left 0.9s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.5s;
+						   -o-animation: fade-from-left 0.9s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.5s;
+							  animation: fade-from-left 0.9s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.5s;}
+.info-1 {-webkit-animation-delay:2.5s; -moz-animation-delay:2.5s; -o-animation-delay:2.5s; animation-delay:2.5s;}
+.info-2 {-webkit-animation-delay:3.5s; -moz-animation-delay:3.5s; -o-animation-delay:3.5s; animation-delay:3.5s;}
+
+.roshambo-header-content, .roshambo-middle-content {
+  padding: 0 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  text-align:center;
+}
+
+.roshambo-start-slides {
+  height: 430px;
+  position: relative;
+  width: 100%;
+  margin-top:30px;
+  -webkit-animation-delay:0s; -moz-animation-delay:0s; -o-animation-delay:0s; animation-delay:0s;
+}
+
+
+.roshambo-start-slide {
+  width: 100%;
+  text-align: center;
+  -webkit-transform: translateX(-150%);
+	 -moz-transform: translateX(-150%);
+	   -o-transform: translateX(-150%);
+          transform: translateX(-150%);
+  -webkit-transition: 0.4s ease-out all;
+	 -moz-transition: 0.4s ease-out all;
+	   -o-transition: 0.4s ease-out all;
+  		  transition: 0.4s ease-out all;
+}
+.roshambo-start-slide.animate-in {
+	-webkit-animation: fade-from-left 0.5s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.5s;
+	   -moz-animation: fade-from-left 0.5s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.5s;
+		 -o-animation: fade-from-left 0.5s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.5s;
+		    animation: fade-from-left 0.5s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.5s;
+}
+
+#start {
+webkit-animation: fade-from-left 0.9s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.5s;
+	   -moz-animation: fade-from-left 0.5s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.5s;
+		 -o-animation: fade-from-left 0.5s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.5s;
+		    animation: fade-from-left 0.5s cubic-bezier(0.5, -0.5, 0.2, 1.5) both 0.5s;
+	
+	-webkit-animation-delay:1s; -moz-animation-delay:1s; -o-animation-delay:1s; animation-delay:1s;
+}
+
+
+button, input {
+	border: 2px solid #ffdc5d;
+	background-color: #333;
+	color: #ffdc5d;
+	font-size: 2rem;
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+	-webkit-transition: 0.4s ease-out all;
+	transition: 0.4s ease-out all;
+	overflow: hidden;
+	border-radius: 5px;
+	margin:20px 10px 10px 20px;
+	max-width:200px;
+}
+button {padding: 10px 40px;}
+input {padding: 10px;}
+
+button:hover {
+  background-color: #ffdc5d;
+  color: #333;
+}
+
+.button-ok {
+	width:auto;
+	margin-left:0px;
+	text-align:center;
+	padding:10px;
+}
+
+#choose-rounds span {white-space:nowrap;}
+
+
+/* --------------------------------------------------------- */
+/* Players:      										     */
+/* --------------------------------------------------------- */
+
+.roshambo-players {
+  margin-bottom: 3rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+  color: #ccc;
+	padding:20px;
+	font-weight:400;
+}
+#roshambo-score {
+  font-size: 8rem;
+  color: #ffdc5d; font-weight:800;
+}
+
+.roshambo-player {
+  text-align: center;
+  padding: 0 20px;
+}
+.roshambo-avatar i {
+	width:60px; 
+	height:60px; 
+	margin-bottom:10px; 
+	background-size:cover;
+}
+
+.player-name {
+	color:#ffdc5d; 
+	font-weight:bold;
+	letter-spacing: 1px;
+}
+
+.rounds {
+  padding: 20px;
+  border-bottom: 1px solid #f9f9f9;
+  color:#ddd;
+  background-color: #333;
+  text-align:center;  
+  font-weight:600;
+  letter-spacing: 1px;
+}
+
+#current-round, #max-rounds {color:#ffdc5d}
+
+
+.roshambo-board {
+  width: 100%;
+  height: 30rem;
+  background-color: #333;
+  overflow: hidden;
+  position: relative;
+	box-sizing:border-box;
+}
+@media only screen and (max-width: 600px) {
+  .roshambo-board {
+    height:40vw;
+	transition:0.5s ease-out all;
+  }
+}
+
+/* --------------------------------------------------------- */
+/* Roshambo Board/Playfield								     */
+/* --------------------------------------------------------- */
+.roshambo-board h2 {
+	margin-top:20px;
+	margin-bottom:20px;
+	color:#eee;
+	font-weight:400;
+	letter-spacing: 1px;
+}
+
+.roshambo-board i.twa {
+	width:80px;
+	height:80px;
+	background-size:cover;
+}
+
+.roshambo-board i.twa {	
+	width:100%;
+	height:100%;
+	
+	padding:30px;
+	
+	background-size: 70% 70%;
+	
+	margin:0;
+}
+
+.roshambo-choice {justify-content: center;}
+
+.roshambo-choice ul {
+  width: 80%;
+	margin:0 auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
+.roshambo-choice li {
+	width: 20vw;
+    height: 20vw;
+	border:2px solid #ffdc5d;
+	border-radius: 1em;
+	background-color:#333;
+	-webkit-transition: background-color 0.4s ease-out, border 0.2s ease-out;
+	-moz-transition: background-color 0.4s ease-out, border 0.2s ease-out;
+	-o-transition: background-color 0.4s ease-out, border 0.2s ease-out;
+	transition: background-color 0.4s ease-out, border 0.2s ease-out;
+}
+
+
+
+.roshambo-choice li {
+  
+  max-width: 160px;
+  max-height: 160px;
+  cursor: pointer;
+  /*-webkit-transition: 0.4s ease-out all;
+  transition: 0.4s ease-out all;*/
+  margin: 1rem;
+
+}
+
+.roshambo-choice li:hover {	
+	background-color:#555;
+	border:8px solid #ffdc5d;
+}
+.roshambo-choice, .roshambo-round-result{
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+          align-items: center;
+  text-align: center;
+  color: #ddd;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.5s ease-in;
+	 -moz-transition: all 0.5s ease-in;
+	   -o-transition: all 0.5s ease-in;
+          transition: all 0.5s ease-in;
+}
+
+.roshambo-round-result {
+  top: -100%;
+}
+.roshambo-choice-made .roshambo-round-result {
+  top: 0;
+  -webkit-transition: all 0.7s ease-in;
+	 -moz-transition: all 0.7s ease-in;
+	   -o-transition: all 0.7s ease-in;
+          transition: all 0.7s ease-in;
+  -webkit-transition-delay: 2s;
+	 -moz-transition-delay: 2s;
+	   -o-transition-delay: 2s;
+	      transition-delay: 2s;
+
+}
+
+.roshambo-round-result h3 {
+  font-size: 3rem;
+}
+
+.roshambo-choice {
+  bottom: 0;
+  background-color: #444;
+  
+  -webkit-transition-delay: 0.4s;
+     -moz-transition-delay: 0.4s;
+       -o-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.roshambo-choice .roshambo-choice-inner {
+  width: 100%;
+}
+.roshambo-choice-made .roshambo-choice {
+  bottom: -100%;
+}
+.roshambo-choice h3 {
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+
+.player-1-choice,
+.player-2-choice {
+  position: absolute;
+  width: 40%;
+  text-align: center;
+	display:inline-block !important;
+}
+.player-1-choice h3,
+.player-2-choice h3 {
+  margin-bottom: 2rem;
+}
+.roshambo-choices {
+	width:100%; 
+}
+
+.player-1-choice span,
+.player-2-choice span {
+  font-size: 0;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+
+.player-2-choice {
+  right: -100%;
+  -webkit-transition: 1s cubic-bezier(0.46, -0.41, 0.3, 1.52) all;
+  transition: 1s cubic-bezier(0.46, -0.41, 0.3, 1.52) all;
+  top:2.5rem; 
+}
+
+.roshambo-choice-made .player-2-choice {
+  right: 0;
+  -webkit-transition: 0.8s cubic-bezier(0.46, -0.41, 0.3, 1.52) all 1.5s;
+  transition: 0.8s cubic-bezier(0.46, -0.41, 0.3, 1.52) all 1.5s;
+}
+
+.player-1-choice {
+  left: -100%;
+  -webkit-transition: 1s cubic-bezier(0.46, -0.41, 0.3, 1.52) all;
+  transition: 1s cubic-bezier(0.46, -0.41, 0.3, 1.52) all;
+  top:2.5rem;
+}
+
+.roshambo-choice-made .player-1-choice {
+  left: 0;
+  -webkit-transition: 0.8s cubic-bezier(0.46, -0.41, 0.3, 1.52) all 0.6s;
+  transition: 0.8s cubic-bezier(0.46, -0.41, 0.3, 1.52) all 0.6s;
+}
+
+.player-1-choice-icon,
+.player-2-choice-icon {
+  width: 20vw;
+  height: 20vw;
+  max-width:190px;
+  max-height:190px;
+  display: inline-block;
+}
+
+
+
+
+/* --------------------------------------------------------- */
+/* Running Game: 										     */
+/* --------------------------------------------------------- */
+
+body.roshambo-running {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+main {padding-top:200px; }
+
+.roshambo-container {max-width:900px; margin:20px auto; }
+
+.roshambo-running .roshambo-start-slides {
+  -webkit-animation: fade-to-right 0.5s both 0.2s;
+	 -moz-animation: fade-to-right 0.5s both 0.2s;
+	   -o-animation: fade-to-right 0.5s both 0.2s;
+          animation: fade-to-right 0.5s both 0.2s;
+}
+
+.roshambo-running .info-1, .roshambo-running .info-2 {
+  -webkit-animation: fade-to-right 0.5s both 0.2s;
+	 -moz-animation: fade-to-right 0.5s both 0.2s;
+	   -o-animation: fade-to-right 0.5s both 0.2s;
+          animation: fade-to-right 0.5s both 0.2s;
+}
+
+.roshambo-running .roshambo-header h1 span, .roshambo-running .roshambo-emojis {
+  -webkit-animation: scale-to-top 0.5s both 0.2s;
+	 -moz-animation: scale-to-top 0.5s both 0.2s;
+	   -o-animation: scale-to-top 0.5s both 0.2s;
+          animation: scale-to-top 0.5s both 0.2s;
+}
+
+.roshambo-running .roshambo-header {
+	 -webkit-animation: shrink-header 0.5s both 0.2s;
+	    -moz-animation: shrink-header 0.5s both 0.2s;
+	      -o-animation: shrink-header 0.5s both 0.2s;
+             animation: shrink-header 0.5s both 0.2s;
+}
+
+/* --------------------------------------------------------- */
+/* Game Over:   										     */
+/* --------------------------------------------------------- */
+.roshambo-game-over * {z-index:5;}
+.roshambo-game-over {
+	z-index:5;
+  position: fixed;
+  top: -100%;
+  left:0;
+  background:#333;
+  color:#ffdc5d;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 1s ease-in all;
+     -moz-transition: 1s ease-in all;
+       -o-transition: 1s ease-in all;	
+          transition: 1s ease-in all;
+  
+  display: flex;
+  align-items: center;
+  z-index: 20;
+  text-align: center;
+
+}
+.roshambo-game-over .game-over-inner {
+  width: 100%;
+}	
+	
+.roshambo-game-over h2 {
+  margin-bottom: 1rem;
+  font-size: 9rem;
+}
+.roshambo-game-over h3 {
+  margin-bottom: 6rem;
+}
+.roshambo-game-over p {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+.end-game .roshambo-game-over {
+  top: 0;
+  left:0;
+  -webkit-transition: 1s ease-in all;
+	 -moz-transition: 1s ease-in all;
+	   -o-transition: 1s ease-in all;
+          transition: 1s ease-in all;
+  z-index:5;
+}
+
+
